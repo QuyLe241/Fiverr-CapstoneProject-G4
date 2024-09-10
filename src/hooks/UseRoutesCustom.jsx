@@ -11,6 +11,9 @@ import AdminLogin from "../page/AdminLogin/AdminLogin";
 import CreateUser from "../page/CreateUser/CreateUser";
 import { Suspense } from "react";
 import { Skeleton } from "antd";
+import Banner from "../components/Banner/Banner";
+import Content from "../components/Content/Content";
+import Body from "../components/Body/Body";
 
 //    giảm lưu lượng file JS cần tải, khi người chưa cần vào trang quan trọng
 //    lazy và suspense(cấu hình ở element)
@@ -26,6 +29,10 @@ const UseRoutesCustom = () => {
         {
           path: pathDefault.listJob,
           element: <ListJobPage />,
+        },
+        {
+          index: true,
+          element: <Body />,
         },
       ],
     },

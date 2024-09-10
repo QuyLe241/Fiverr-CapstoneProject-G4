@@ -4,7 +4,7 @@ import Footer from "../../components/footer/Footer";
 import { Outlet } from "react-router-dom";
 
 const UserTemplate = () => {
-  //  header , contenta , footer
+  //  header , content , footer
   return (
     <>
       <Header />
