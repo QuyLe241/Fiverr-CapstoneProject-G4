@@ -61,7 +61,10 @@ const Header = () => {
     //    chỉnh container tại file configTailwind
     <header className="py-5">
       <div className="container mx-auto px-2">
-        <div className="header_content flex items-center justify-between">
+        <div
+          style={{ fontWeight: 600, fontSize: "17px" }}
+          className="header_content flex items-center justify-between"
+        >
           <div className="header_logo flex items-center space-x-3">
             {/*   Sử dụng thẻ svg bằng cách tạo ra component chứa thẻ svg và gọi đến component header */}
             <Link to={pathDefault.homePage}>
@@ -79,7 +82,22 @@ const Header = () => {
             >
               <a onClick={(e) => e.preventDefault()}>
                 <Space>
-                  Click me
+                  Fiverr Pro
+                  <DownOutlined />
+                </Space>
+              </a>
+            </Dropdown>
+
+            <Dropdown
+              menu={{
+                items,
+              }}
+              trigger={["click"]}
+              className="cursor-pointer py-2 px-4 hover:bg-gray-100 rounded-sm duration-300"
+            >
+              <a onClick={(e) => e.preventDefault()}>
+                <Space>
+                  Explore
                   <DownOutlined />
                 </Space>
               </a>
