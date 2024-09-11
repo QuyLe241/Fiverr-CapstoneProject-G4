@@ -104,7 +104,10 @@ const FormSearchProduct = () => {
         open={checkDropdown}
       >
         <form action="" onSubmit={handleSubmit}>
-          <div className="pl-4 rounded-md border border-gray-400 flex items-center justify-between min-w-[400px]">
+          <div
+            style={{ border: "3px solid" }}
+            className="ml-5 pl-4 rounded-md border border-gray-400 flex items-center justify-between min-w-[400px] max-w-[550px]"
+          >
             <input
               type="text"
               onChange={handleChange}
@@ -112,8 +115,16 @@ const FormSearchProduct = () => {
               placeholder="Nhập vào công việc bạn muốn tìm(english)"
               className="flex-1 focus:border-none focus:outline-none"
             />
-            <button type="submit" className="py-2">
-              <IconSearch size={30} color={"black"} />
+            <button
+              type="submit"
+              className=""
+              style={{
+                border: "black 1px solid",
+                padding: "6px",
+                backgroundColor: "black",
+              }}
+            >
+              <IconSearch size={30} color={"white"} />
             </button>
           </div>
         </form>

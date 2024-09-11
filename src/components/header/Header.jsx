@@ -59,7 +59,7 @@ const items = [
 const Header = () => {
   return (
     //    chỉnh container tại file configTailwind
-    <header className="py-5">
+    <header className="py-5 env_header">
       <div className="container mx-auto px-2">
         <div
           style={{ fontWeight: 600, fontSize: "17px" }}
@@ -103,17 +103,23 @@ const Header = () => {
               </a>
             </Dropdown>
 
-            <button>English</button>
-            <a href="#">Become a seller</a>
+            <button className="hover:text-green-500">English</button>
+            <a href="#" className="hover:text-green-500">
+              Become a seller
+            </a>
             <LinkCustom
               content={"Đăng nhập"}
               to={pathDefault.login}
-              className={"border border-green-500 text-green-500 btn_login"}
+              className={
+                "border border-green-500 text-green-500 btn_login rounded-lg"
+              }
             />
             <LinkCustom
               content={"Đăng ký"}
               to={pathDefault.register}
-              className={"border bg-green-500 text-white btn_register"}
+              className={
+                "border bg-green-500 text-white btn_register rounded-lg"
+              }
             />
             {/* <Link to={"/"}>Đăng ký</Link>
             <Link to={"/"}>Đăng nhập</Link> */}

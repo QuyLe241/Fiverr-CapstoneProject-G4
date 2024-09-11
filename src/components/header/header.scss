@@ -7,6 +7,15 @@ header .ant-dropdown-trigger svg {
     transition: all 0.3s;
 }
 
+.env_header {
+    border-bottom: 1px solid rgb(236, 227, 227);
+    background-color: white;
+    // position: fixed;
+    position: sticky;
+    top: 0;
+
+}
+
 .header_content .header_navigation .btn_login:hover {
     background-color: rgb(104, 226, 104);
     color: white;

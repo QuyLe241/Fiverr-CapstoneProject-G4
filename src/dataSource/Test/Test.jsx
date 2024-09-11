@@ -7,15 +7,12 @@ import {
   VideoCameraOutlined,
   PlusCircleOutlined,
 } from "@ant-design/icons";
-import { Button, Layout, Menu, theme, Tabs } from "antd";
+import { Button, Layout, Menu, theme } from "antd";
 import { getLocalStorage } from "../../utils/utils";
 import { useDispatch } from "react-redux";
 import { getValueUserApi } from "../../redux/nguoiDungSlice";
 import { Link, Outlet, NavLink, useLocation } from "react-router-dom";
 import { pathDefault } from "../../common/path";
-import Item from "antd/es/list/Item";
-import CreateUser from "../../page/CreateUser/CreateUser";
-import { isPending } from "@reduxjs/toolkit";
 const { Header, Sider, Content } = Layout;
 
 const AdminTemplate = () => {
@@ -47,7 +44,8 @@ const AdminTemplate = () => {
 
   //  kiểm tra phần tử đang đứng tại trang
   const selectedKey = location.pathname;
-  // const [selectedKey, setSelectedKey] = useState();
+  const [selectedKey, setSelectedKey] = useState();
+
   return (
     <Layout className="min-h-screen">
       <Sider trigger={null} collapsible collapsed={collapsed}>
@@ -56,12 +54,9 @@ const AdminTemplate = () => {
           theme="dark"
           mode="inline"
           defaultSelectedKeys={[selectedKey]}
-          // selectedKeys={[selectedKey]}
-          // defaultOpenKeys={[selectedKey]}
-
           items={[
             {
-              key: pathDefault.adminTemplate,
+              key: selectedKey,
               icon: <UserOutlined />,
               label: (
                 <NavLink to={pathDefault.adminTemplate}>Người dùng</NavLink>
@@ -73,7 +68,7 @@ const AdminTemplate = () => {
             //   label: <Link to={pathDefault.createUser}>Tạo người dùng</Link>,
             // },
             {
-              key: pathDefault.createUser,
+              key: selectedKey,
               icon: <PlusCircleOutlined />,
               label: (
                 <NavLink to={pathDefault.createUser}>Tạo người dùng</NavLink>
@@ -82,12 +77,12 @@ const AdminTemplate = () => {
             {
               key: "jobs",
               icon: <VideoCameraOutlined />,
-              label: <NavLink>Công việc</NavLink>,
+              label: <NavLink to={"jobs"}>Công việc</NavLink>,
             },
             {
               key: "hire",
               icon: <UploadOutlined />,
-              label: "",
+              label: <NavLink to={"hire"}>Thuê công việc</NavLink>,
             },
           ]}
         />
