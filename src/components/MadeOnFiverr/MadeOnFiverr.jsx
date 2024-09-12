@@ -2,6 +2,7 @@ import React from "react";
 import "./style.scss";
 import { Link } from "react-router-dom";
 import GuideBanner from "../../assets/Img/Guides-Banner.png";
+import pathDefault from "../../common/path.js";
 
 const MadeOnFiverr = () => {
   return (
@@ -73,6 +74,7 @@ const MadeOnFiverr = () => {
           <div className=""></div>
           <div className="mb-8" style={{}}>
             <Link
+              to={pathDefault.login}
               style={{
                 backgroundColor: "#fff",
                 color: "#222325",
