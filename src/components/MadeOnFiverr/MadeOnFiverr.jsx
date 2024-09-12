@@ -74,7 +74,7 @@ const MadeOnFiverr = () => {
           <div className=""></div>
           <div className="mb-8" style={{}}>
             <Link
-              to={pathDefault.login}
+              // to={pathDefault.login}
               style={{
                 backgroundColor: "#fff",
                 color: "#222325",
