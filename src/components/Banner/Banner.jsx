@@ -21,7 +21,7 @@ const Banner = () => {
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
         }}
-        className="banner h-[580px] "
+        className="banner h-[580px] w-full"
       ></div>
       <div className="listJob_item">
         {/* hover:bg-color 
