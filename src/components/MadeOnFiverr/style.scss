@@ -3,14 +3,30 @@
     font-size: 16px;
 }
 
-// .guides .slick-arrow {
-//     padding: 12px;
-//     border-radius: 50%;
-//     font-size: 16px;
-//     color: rgb(55, 54, 54);
-//     background-color: white;
+ .slick-arrow::before {
+    margin: 0 !important;
+    // background-color: white;
+    border-radius: 50%;
+    font-size: 30px;
+    // padding: 1px;
+    // background-color: black;
     
+}
+
+.slick-next::before {
+    margin: 0 !important;
+    // background-color: white;
+    border-radius: 50%;
+    font-size: 30px;
+}
+
+// .slick-arrow {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
 // }
+
+
 
 // .guides .slick-arrow::after {
 //     margin-top: 3px;

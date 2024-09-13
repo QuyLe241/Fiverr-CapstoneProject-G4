@@ -73,3 +73,20 @@
 .bgImgMake {
   background-color: #6b280b !important;
 }
+
+.slick-arrow::before {
+  margin: 0 !important;
+  // background-color: white;
+  border-radius: 50%;
+  font-size: 30px;
+  // padding: 1px;
+  // background-color: black;
+  
+}
+
+.slick-next::before {
+  margin: 0 !important;
+  // background-color: white;
+  border-radius: 50%;
+  font-size: 30px;
+}

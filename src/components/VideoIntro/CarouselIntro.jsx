@@ -26,6 +26,46 @@ const CarouselIntro = () => {
     setIsModalOpen(false);
   };
 
+  // custom arrow
+  function SampleNextArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{
+          ...style,
+          left: "",
+          right: "20px",
+          display: "block",
+          fontSize: "15px",
+          // borderRadius: "50%",
+        }}
+        onClick={onClick}
+      />
+    );
+  }
+
+  function SamplePrevArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{
+          ...style,
+          display: "block",
+          right: "",
+          left: "20px",
+          zIndex: "10",
+          // background: "white",
+          // padding: "10px",
+          fontSize: "15px",
+          // borderRadius: "50%",
+        }}
+        onClick={onClick}
+      />
+    );
+  }
+
   // Cấu hình cho slick carousel
   const settings = {
     dots: false,
@@ -34,6 +74,8 @@ const CarouselIntro = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: true,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
   };
 
   return (
@@ -216,10 +258,7 @@ const CarouselIntro = () => {
                   <h2 className="text-gray-400 fonttext2 text-2xl text-start my-8 font-extralight">
                     Kay Kim, Co-Founder
                     <span className="inline-block customeroot pl-6 ">
-                      <img
-                        src="/img/rooted-logo-x2.7da3bc9.png"
-                        alt=""
-                      />
+                      <img src="/img/rooted-logo-x2.7da3bc9.png" alt="" />
                     </span>
                   </h2>
                   <p className="fonttest text-black text-3xl text-start">
@@ -278,11 +317,11 @@ const CarouselIntro = () => {
 
               <div className="w-1/2 mr-8">
                 <div>
-                  
                   <h5 className=" fonttext2 text-gray-400 relative text-2xl text-start my-8 font-extralight">
                     Tim and Dan Joo, Co-Founders
                     <p className=" inline-block absolute  -top-2 right-36  font-semibold ">
-                      <img width={230}
+                      <img
+                        width={230}
                         src="/img/haerfest-logo-x2.934ab63.png"
                         alt=""
                       />

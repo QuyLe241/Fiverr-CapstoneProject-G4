@@ -9,6 +9,7 @@ import GuideItem2 from "../../assets/Img/guide-item2.png";
 import GuideItem3 from "../../assets/Img/guide-item3.png";
 import GuideItem4 from "../../assets/Img/guide-item4.png";
 import GuideItem5 from "../../assets/Img/guide-item5.png";
+import Slider from "react-slick";
 
 const MadeOnFiverr = () => {
   const contentStyle = {
@@ -27,20 +28,14 @@ const MadeOnFiverr = () => {
         className={className}
         style={{
           ...style,
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          background: "white",
+          left: "",
+          right: "20px",
+          display: "block",
           fontSize: "15px",
-          padding: "20px",
-          borderRadius: "50%",
+          // borderRadius: "50%",
         }}
         onClick={onClick}
-      >
-        <span>
-          <i class="fa-solid fa-chevron-right text-black"></i>
-        </span>
-      </div>
+      />
     );
   }
 
@@ -51,23 +46,23 @@ const MadeOnFiverr = () => {
         className={className}
         style={{
           ...style,
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          background: "white",
+          display: "block",
+          right: "",
+          left: "20px",
+          zIndex: "10",
+          // background: "white",
+          // padding: "10px",
           fontSize: "15px",
-          padding: "20px",
-          borderRadius: "50%",
+          // borderRadius: "50%",
         }}
         onClick={onClick}
-      >
-        <span className="">
-          <i class="fa-solid fa-chevron-left text-black"></i>
-        </span>
-      </div>
+      />
     );
   }
   const settings = {
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
   };
@@ -92,16 +87,8 @@ const MadeOnFiverr = () => {
         <div className="col-start-4 row-start-5">12</div>
       </div>
       {/* Guides */}
-      <div className="guides py-8">
-        <Carousel
-          {...settings}
-          className=""
-          arrows
-          slidesToShow={"3"}
-          slidesToScroll={"1"}
-          dots={false}
-          infinite={false}
-        >
+      <div className="guides py-8 slider-container">
+        <Slider {...settings}>
           <div className="slide">
             <a href="">
               <div className="">
@@ -142,7 +129,7 @@ const MadeOnFiverr = () => {
               <span>Grow your business with AI</span>
             </a>
           </div>
-        </Carousel>
+        </Slider>
       </div>
       {/* guides banner */}
       <div className="guides_banner py-6">
