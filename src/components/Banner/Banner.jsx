@@ -28,7 +28,7 @@ const Banner = () => {
         background: rgb(29,191,115);
         background: radial-gradient(circle, rgba(29,191,115,1) 0%, rgba(135,221,181,1) 0%, rgba(255,255,255,1) 80%);
       */}
-        <div className="grid grid-cols-9 grid-rows-1 gap-3 env_item">
+        <div className="grid grid-cols-9 grid-rows-1 gap-3 env_item py-3">
           <div className="shadow-lg rounded-xl item" style={{ height: "" }}>
             <Link className={""} style={{ height: "" }}>
               <div className="" style={{ height: "" }}>
