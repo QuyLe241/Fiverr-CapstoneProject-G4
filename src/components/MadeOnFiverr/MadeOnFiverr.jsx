@@ -3,8 +3,75 @@ import "./style.scss";
 import { Link } from "react-router-dom";
 import GuideBanner from "../../assets/Img/Guides-Banner.png";
 import { pathDefault } from "../../common/path.js";
+import { Carousel } from "antd";
+import GuideItem1 from "../../assets/Img/guide-item1.png";
+import GuideItem2 from "../../assets/Img/guide-item2.png";
+import GuideItem3 from "../../assets/Img/guide-item3.png";
+import GuideItem4 from "../../assets/Img/guide-item4.png";
+import GuideItem5 from "../../assets/Img/guide-item5.png";
 
 const MadeOnFiverr = () => {
+  const contentStyle = {
+    margin: 0,
+    height: "160px",
+    color: "#fff",
+    lineHeight: "160px",
+    textAlign: "center",
+    background: "#364d79",
+  };
+
+  function SampleNextArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{
+          ...style,
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          background: "white",
+          fontSize: "15px",
+          padding: "20px",
+          borderRadius: "50%",
+        }}
+        onClick={onClick}
+      >
+        <span>
+          <i class="fa-solid fa-chevron-right text-black"></i>
+        </span>
+      </div>
+    );
+  }
+
+  function SamplePrevArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{
+          ...style,
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          background: "white",
+          fontSize: "15px",
+          padding: "20px",
+          borderRadius: "50%",
+        }}
+        onClick={onClick}
+      >
+        <span className="">
+          <i class="fa-solid fa-chevron-left text-black"></i>
+        </span>
+      </div>
+    );
+  }
+  const settings = {
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
+  };
+
   return (
     <div className="container mx-auto px-2 my-3 pb-10">
       <h2 className="mx-3 my-5" style={{ fontWeight: 400, fontSize: "46px" }}>
@@ -26,38 +93,56 @@ const MadeOnFiverr = () => {
       </div>
       {/* Guides */}
       <div className="guides py-8">
-        <div className="grid grid-cols-6 grid-rows-1 gap-3">
-          <div className="col-span-5 items-end justify-end">
-            <h2 className="" style={{ fontWeight: 400, fontSize: "46px" }}>
-              Guides to help you grow
-            </h2>
-          </div>
-          <div className="col-start-6">
-            <div className="my-3">
-              <Link className="my-3">See more</Link>
-            </div>
-          </div>
-        </div>
-        <div className=" grid grid-cols-3 grid-rows-1 gap-3">
+        <Carousel
+          {...settings}
+          className=""
+          arrows
+          slidesToShow={"3"}
+          slidesToScroll={"1"}
+          dots={false}
+          infinite={false}
+        >
           <div className="slide">
-            <Link>
-              <img src="" alt="" />
-              <p>Start a side business</p>
-            </Link>
+            <a href="">
+              <div className="">
+                <img src={GuideItem1} alt="" />
+              </div>
+              <span>Start a side business</span>
+            </a>
           </div>
           <div className="slide">
-            <Link>
-              <img src="" alt="" />
-              <p>Ecommerce business Ideas </p>
-            </Link>
+            <a href="">
+              <div>
+                <img src={GuideItem2} alt="" />
+              </div>
+              <span>Ecommerce business ideas</span>
+            </a>
           </div>
           <div className="slide">
-            <Link>
-              <img src="" alt="" />
-              <p>Start an online business and work from home</p>
-            </Link>
+            <a href="">
+              <div className="">
+                <img src={GuideItem3} alt="" />
+              </div>
+              <span>Start an online business and work from home</span>
+            </a>
           </div>
-        </div>
+          <div className="slide">
+            <a href="">
+              <div className="">
+                <img src={GuideItem4} alt="" />
+              </div>
+              <span>Build a website from scratch</span>
+            </a>
+          </div>
+          <div className="slide">
+            <a href="">
+              <div className="">
+                <img src={GuideItem5} alt="" />
+              </div>
+              <span>Grow your business with AI</span>
+            </a>
+          </div>
+        </Carousel>
       </div>
       {/* guides banner */}
       <div className="guides_banner py-6">

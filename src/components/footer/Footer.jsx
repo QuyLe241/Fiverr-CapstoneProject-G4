@@ -234,27 +234,27 @@ const Footer = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="">
+                  <a href="#">
                     <IconIg />
                   </a>
                 </li>
                 <li>
-                  <a href="">
+                  <a href="#">
                     <IconLinked />
                   </a>
                 </li>
                 <li>
-                  <a href="">
+                  <a href="#">
                     <IconFaceBook />
                   </a>
                 </li>
                 <li>
-                  <a href="">
+                  <a href="#">
                     <IconPinteres />
                   </a>
                 </li>
                 <li>
-                  <a href="">
+                  <a href="#">
                     <IconX />
                   </a>
                 </li>

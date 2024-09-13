@@ -59,7 +59,7 @@ const items = [
 const Header = () => {
   return (
     //    chỉnh container tại file configTailwind
-    <header className="py-5 env_header">
+    <header className="py-5 env_header" style={{ zIndex: "999" }}>
       <div className="container mx-auto px-2">
         <div
           style={{ fontWeight: 600, fontSize: "17px" }}
