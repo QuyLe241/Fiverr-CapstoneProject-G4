@@ -38,7 +38,6 @@ const CarouselIntro = () => {
           right: "20px",
           display: "block",
           fontSize: "15px",
-          // borderRadius: "50%",
         }}
         onClick={onClick}
       />
