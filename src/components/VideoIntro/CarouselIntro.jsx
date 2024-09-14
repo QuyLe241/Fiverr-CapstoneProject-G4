@@ -16,14 +16,21 @@ const contentStyle = {
 
 const CarouselIntro = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const showModal = () => {
+  const [currentVideo, setCurrentVideo] = useState(null);
+
+  const showModal = (videoUrl) => {
+    setCurrentVideo(videoUrl);
     setIsModalOpen(true);
   };
+
   const handleOk = () => {
     setIsModalOpen(false);
+    setCurrentVideo(null); // Clear the video when modal is closed
   };
+
   const handleCancel = () => {
     setIsModalOpen(false);
+    setCurrentVideo(null);
   };
 
   // Cấu hình cho slick carousel
@@ -45,12 +52,13 @@ const CarouselIntro = () => {
       </div>
       <div className="bg-white rounded-lg mx-4">
         <Slider {...settings}>
+          {/* Slide 1 */}
           <div>
             <div className="flex justify-between" style={contentStyle}>
               <div className="w-1/2 relative">
                 <div
                   className="relative cursor-pointer"
-                  onClick={showModal}
+                  onClick={() => showModal("/img/plfa.mp4")}
                   style={{ width: "100%", height: "100%" }}
                 >
                   <img
@@ -64,52 +72,26 @@ const CarouselIntro = () => {
                     alt="Testimonial"
                   />
                 </div>
-                <Modal
-                  className="custom-modal"
-                  width={1000}
-                  title=""
-                  open={isModalOpen}
-                  onOk={handleOk}
-                  onCancel={handleCancel}
-                  footer={null}
-                >
-                  <video
-                    src="/img/plfa.mp4"
-                    autoPlay
-                    className="video-modal"
-                    controls
-                    role="video"
-                    preload="auto"
-                    crossOrigin="anonymous"
-                    muted
-                    style={{ width: "100%", height: "100%" }}
-                  ></video>
-                </Modal>
               </div>
               <div className="w-1/2">
-                <div>
-                  <h2 className="text-gray-400 fonttext2 text-2xl text-start my-8 font-extralight">
-                    Caitlin Tormey, Chief Commercial Officer{" "}
-                    <span className="pl-9 font-semibold">NAADAM</span>
-                  </h2>
-                  <p className="fonttest text-black text-3xl text-start">
-                    "We've used Fiverr for Shopify web development, <br />{" "}
-                    graphic design, and backend web development. <br /> Working
-                    with Fiverr makes my job a little easier <br /> every day."
-                  </p>
-                </div>
+                <h2 className="text-gray-400 fonttext2 text-2xl text-start my-8 font-extralight">
+                  Caitlin Tormey, Chief Commercial Officer{" "}
+                  <span className="pl-9 font-semibold">NAADAM</span>
+                </h2>
+                <p className="fonttest text-black text-3xl text-start">
+                  "We've used Fiverr for Shopify web development, <br /> graphic design, and backend web development. <br /> Working with Fiverr makes my job a little easier <br /> every day."
+                </p>
               </div>
             </div>
           </div>
 
-          {/* 2 */}
-
+          {/* Slide 2 */}
           <div>
             <div className="flex justify-between" style={contentStyle}>
               <div className="w-1/2 relative">
                 <div
                   className="relative cursor-pointer"
-                  onClick={showModal}
+                  onClick={() => showModal("/img/thefirst.mp4")}
                   style={{ width: "100%", height: "100%" }}
                 >
                   <img
@@ -123,59 +105,31 @@ const CarouselIntro = () => {
                     alt="Testimonial"
                   />
                 </div>
-                <Modal
-                  className="custom-modal"
-                  width={1000}
-                  title=""
-                  open={isModalOpen}
-                  onOk={handleOk}
-                  onCancel={handleCancel}
-                  footer={null}
-                >
-                  <video
-                    src="../../../public/img/plfa.mp4"
-                    autoPlay
-                    className="video-modal"
-                    controls
-                    role="video"
-                    preload="auto"
-                    crossOrigin="anonymous"
-                    muted
-                    style={{ width: "100%", height: "100%" }}
-                  ></video>
-                </Modal>
               </div>
-
-              {/* 3 */}
-
               <div className="w-1/2">
-                <div>
-                  <h2 className=" fonttext2 text-gray-400  text-2xl text-start my-8 font-thin">
-                    Brighid Gannon (DNP, PMHNP-BC), Co-Founder
-                    <span className="inline-block customeroot">
-                      <img
-                        src="../../../public/img/lavender-logo-x2.3fff9e7.png"
-                        alt=""
-                      />
-                    </span>
-                  </h2>
-                  <p className=" fonttest text-black text-3xl text-start">
-                    "We used Fiverr for SEO, our logo, website, copy, <br />{" "}
-                    animated videos — literally everything. It was like <br />{" "}
-                    working with a human right next to you versus being <br />{" "}
-                    across the world."
-                  </p>
-                </div>
+                <h2 className="fonttext2 text-gray-400 text-2xl text-start my-8 font-thin">
+                  Brighid Gannon (DNP, PMHNP-BC), Co-Founder
+                  <span className="inline-block customeroot">
+                    <img
+                      src="/img/lavender-logo-x2.3fff9e7.png"
+                      alt="Lavender"
+                    />
+                  </span>
+                </h2>
+                <p className="fonttest text-black text-3xl text-start">
+                  "We used Fiverr for SEO, our logo, website, copy, <br /> animated videos — literally everything. It was like <br /> working with a human right next to you versus being <br /> across the world."
+                </p>
               </div>
             </div>
           </div>
 
+          {/* Slide 3 */}
           <div>
             <div className="flex justify-between" style={contentStyle}>
               <div className="w-1/2 relative">
                 <div
                   className="relative cursor-pointer"
-                  onClick={showModal}
+                  onClick={() => showModal("/img/rooted.mp4")}
                   style={{ width: "100%", height: "100%" }}
                 >
                   <img
@@ -185,61 +139,32 @@ const CarouselIntro = () => {
                   />
                   <img
                     className="rounded-lg"
-                    src="../../../public/img/still-rooted.jpg"
+                    src="/img/still-rooted.jpg"
                     alt="Testimonial"
                   />
                 </div>
-                <Modal
-                  className="custom-modal"
-                  width={1000}
-                  title=""
-                  open={isModalOpen}
-                  onOk={handleOk}
-                  onCancel={handleCancel}
-                  footer={null}
-                >
-                  <video
-                    src="../../../public/img/plfa.mp4"
-                    autoPlay
-                    className="video-modal"
-                    controls
-                    role="video"
-                    preload="auto"
-                    crossOrigin="anonymous"
-                    muted
-                    style={{ width: "100%", height: "100%" }}
-                  ></video>
-                </Modal>
               </div>
               <div className="w-1/2">
-                <div>
-                  <h2 className="text-gray-400 fonttext2 text-2xl text-start my-8 font-extralight">
-                    Kay Kim, Co-Founder
-                    <span className="inline-block customeroot pl-6 ">
-                      <img
-                        src="/img/rooted-logo-x2.7da3bc9.png"
-                        alt=""
-                      />
-                    </span>
-                  </h2>
-                  <p className="fonttest text-black text-3xl text-start">
-                    "It's extremely exciting that Fiverr has freelancers <br />{" "}
-                    from all over the world — it broadens the talent pool.{" "}
-                    <br /> One of the best things about Fiverr is that while
-                    we're <br /> sleeping, someone's working."
-                  </p>
-                </div>
+                <h2 className="text-gray-400 fonttext2 text-2xl text-start my-8 font-extralight">
+                  Kay Kim, Co-Founder{" "}
+                  <span className="inline-block customeroot pl-6">
+                    <img src="/img/rooted-logo-x2.7da3bc9.png" alt="Rooted" />
+                  </span>
+                </h2>
+                <p className="fonttest text-black text-3xl text-start">
+                  "It's extremely exciting that Fiverr has freelancers <br /> from all over the world — it broadens the talent pool. <br /> One of the best things about Fiverr is that while we're <br /> sleeping, someone's working."
+                </p>
               </div>
             </div>
           </div>
 
-          {/* 4 */}
+          {/* Slide 4 */}
           <div>
             <div className="flex justify-between" style={contentStyle}>
               <div className="w-1/2 relative">
                 <div
                   className="relative cursor-pointer"
-                  onClick={showModal}
+                  onClick={() => showModal("/img/hear.mp4")}
                   style={{ width: "100%", height: "100%" }}
                 >
                   <img
@@ -253,52 +178,47 @@ const CarouselIntro = () => {
                     alt="Testimonial"
                   />
                 </div>
-                <Modal
-                  className="custom-modal"
-                  width={1000}
-                  title=""
-                  open={isModalOpen}
-                  onOk={handleOk}
-                  onCancel={handleCancel}
-                  footer={null}
-                >
-                  <video
-                    src="/img/plfa.mp4"
-                    autoPlay
-                    className="video-modal"
-                    controls
-                    role="video"
-                    preload="auto"
-                    crossOrigin="anonymous"
-                    muted
-                    style={{ width: "100%", height: "100%" }}
-                  ></video>
-                </Modal>
               </div>
-
-              <div className="w-1/2 mr-8">
-                <div>
-                  
-                  <h5 className=" fonttext2 text-gray-400 relative text-2xl text-start my-8 font-extralight">
-                    Tim and Dan Joo, Co-Founders
-                    <p className=" inline-block absolute  -top-2 right-36  font-semibold ">
-                      <img width={230}
-                        src="/img/haerfest-logo-x2.934ab63.png"
-                        alt=""
-                      />
-                    </p>
-                  </h5>
-                  <p className="fonttest text-black  text-3xl text-start leading-normal">
-                    "When you want to create a business bigger than <br />{" "}
-                    yourself, you need a lot of help. That's what Fiverr <br />{" "}
-                    does."
-                  </p>
-                </div>
+              <div className="w-1/2">
+                <h5 className="fonttext2 text-gray-400 text-2xl text-start my-8 font-extralight">
+                  Tim and Dan Joo, Co-Founders
+                  <span className="inline-block absolute pl-6">
+                    <img src="/img/haerfest-logo-x2.934ab63.png" alt="Haerfest" />
+                  </span>
+                </h5>
+                <p className="fonttest text-black text-3xl text-start leading-normal">
+                  "When you want to create a business bigger than <br /> yourself, you need a lot of help. That's what Fiverr <br /> does."
+                </p>
               </div>
             </div>
           </div>
         </Slider>
       </div>
+
+      {/* Modal for video */}
+      {currentVideo && (
+        <Modal
+          className="custom-modal"
+          width={1000}
+          title=""
+          open={isModalOpen}
+          onOk={handleOk}
+          onCancel={handleCancel}
+          footer={null}
+        >
+          <video
+            src={currentVideo}
+            autoPlay
+            className="video-modal"
+            controls
+            role="video"
+            preload="auto"
+            crossOrigin="anonymous"
+            muted
+            style={{ width: "100%", height: "100%" }}
+          ></video>
+        </Modal>
+      )}
     </div>
   );
 };
