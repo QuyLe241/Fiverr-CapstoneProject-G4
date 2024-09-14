@@ -18,7 +18,7 @@ function BannerIntro() {
             <br /> execute your project. Overseeing a team of e-Commerce
             experts, they'll <br /> handle everything from site building, design
             and content to optimization, <br /> marketing strategies, and UGC
-            videos.
+            videos
           </p>
           <p className="mb-4 text-base font-medium">
             To get started, you should have:
@@ -26,7 +26,7 @@ function BannerIntro() {
           <ul className="text text-base pb-7">
             <li>An e-Commerce project requiring expertise in various fields</li>
             <li>A budget exceeding $1000</li>
-            <li>A desire to get things done, without the hassle</li>
+            <li>A desire to get things done without the hassle</li>
           </ul>
           <button className="px-5 py-2 bg-orange-600 text-white rounded-md hover:opacity-90">
             Get started
