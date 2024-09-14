@@ -25,7 +25,7 @@ const CarouselIntro = () => {
 
   const handleOk = () => {
     setIsModalOpen(false);
-    setCurrentVideo(null); // Clear the video when modal is closed
+    setCurrentVideo(null); 
   };
 
   const handleCancel = () => {
