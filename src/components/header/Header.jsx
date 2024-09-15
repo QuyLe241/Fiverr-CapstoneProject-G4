@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logoHeader from "../../assets/svg/logoHeader.svg";
 import IconLogoHeader from "../../icon/IconLogoHeader";
 import { pathDefault } from "../../common/path.js";
@@ -17,11 +17,11 @@ const Header = () => {
   const fiverrPro = [
     {
       key: "0",
-      label: <Link to={"#"}> item 1</Link>,
+      label: <NavLink to={pathDefault.lookingToHire}> item 1</NavLink>,
     },
     {
       key: "1",
-      label: <Link to={"#"}> item 2</Link>,
+      label: <NavLink to={pathDefault.proService}> item 2</NavLink>,
     },
   ];
 

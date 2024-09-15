@@ -14,6 +14,8 @@ import { Skeleton } from "antd";
 import Banner from "../components/Banner/Banner";
 import Content from "../components/Content/Content";
 import Body from "../components/Body/Body";
+import LookingToHire from "../components/LookingToHire/LookingToHire";
+import ProSerVice from "../components/ProService/ProSerVice";
 
 //    giảm lưu lượng file JS cần tải, khi người chưa cần vào trang quan trọng
 //    lazy và suspense(cấu hình ở element)
@@ -34,6 +36,15 @@ const UseRoutesCustom = () => {
           index: true,
           element: <Body />,
         },
+        {
+          path: pathDefault.lookingToHire,
+          element: <LookingToHire />,
+        },
+        {
+          path: pathDefault.proService,
+          element: <ProSerVice />,
+        },
+        {},
       ],
     },
     {

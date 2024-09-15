@@ -7,4 +7,6 @@ export const pathDefault = {
   adminLogin: "/admin-login",
   managerUser: "manager-user",
   createUser: "create-user",
+  lookingToHire: "looking-to-hire",
+  proService: "pro-services",
 };
