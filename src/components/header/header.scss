@@ -27,3 +27,47 @@ header .ant-dropdown-trigger svg {
     
     transition: all 0.5s;
 }
+
+.ant-tabs-nav .ant-tabs-nav-wrap .ant-tabs-nav-list .ant-tabs-tab-active .ant-tabs-tab-btn{
+    color: #1dbf73;
+    // background-color: #1dbf73;
+}
+
+.ant-tabs-nav .ant-tabs-nav-wrap .ant-tabs-nav-list .ant-tabs-tab-active .ant-tabs-tab-btn::before{
+    color: #1dbf73;
+    // background-color: #1dbf73;
+}
+
+.ant-tabs-nav .ant-tabs-nav-wrap .ant-tabs-nav-list .ant-tabs-tab:hover .ant-tabs-tab-btn{
+    color: #1dbf73;
+    // background-color: #1dbf73;
+}
+
+.ant-tabs-nav .ant-tabs-nav-wrap .ant-tabs-nav-list .ant-tabs-tab .ant-tabs-tab-btn{
+    // color: #95979d;
+    font-weight: 600;
+    // background-color: #1dbf73;
+}
+
+.ant-tabs-tab-btn {
+    color: #95979d;
+}
+
+.ant-modal-footer .ant-btn-default {
+    border: #1dbf73 1px solid;
+    color: #1dbf73;
+}
+
+.ant-modal-content .ant-modal-footer .ant-btn-default:hover {
+    border: #33db8c 1px solid;
+    color: #16d079;
+}
+
+.ant-modal-footer .ant-btn-primary {
+    background-color: #1dbf73;
+}
+
+.ant-modal-content .ant-modal-footer .ant-btn-primary:hover {
+    background-color: #3cdd92;
+    // opacity: 0.8;
+}

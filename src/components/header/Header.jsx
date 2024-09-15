@@ -1,13 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logoHeader from "../../assets/svg/logoHeader.svg";
 import IconLogoHeader from "../../icon/IconLogoHeader";
 import { pathDefault } from "../../common/path.js";
 import { DownOutlined, SmileOutlined } from "@ant-design/icons";
-import { Dropdown, Space } from "antd";
+import { Dropdown, Space, Button, Modal } from "antd";
+// import { Button, Modal } from 'antd';
+
 import "./header.scss";
 import LinkCustom from "../LinkCustom/LinkCustom.jsx";
 import FormSearchProduct from "../FormSearchProduct/FormSearchProduct.jsx";
+import IconEng from "./IconEng.jsx";
+import SetLanguage from "./SetLanguage.jsx";
 
 const items = [
   {
@@ -57,6 +61,18 @@ const items = [
 ];
 
 const Header = () => {
+  // modal
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+  const handleOk = () => {
+    setIsModalOpen(false);
+  };
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
   return (
     //    chỉnh container tại file configTailwind
     <header className="py-5 env_header" style={{ zIndex: "999" }}>
@@ -102,8 +118,19 @@ const Header = () => {
                 </Space>
               </a>
             </Dropdown>
-
-            <button className="hover:text-green-500">English</button>
+            {/* modal */}
+            <button className="hover:text-green-500" onClick={showModal}>
+              <i class="fa-solid fa-globe "></i>English
+            </button>
+            <Modal
+              title="Select your preferences"
+              open={isModalOpen}
+              onOk={handleOk}
+              onCancel={handleCancel}
+            >
+              <SetLanguage />
+            </Modal>
+            {/* modal */}
             <a href="#" className="hover:text-green-500">
               Become a seller
             </a>
