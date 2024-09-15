@@ -41,7 +41,7 @@ function BannerIntro() {
           />
         </div>
       </div>
-      <CarouselIntro/>
+      <CarouselIntro />
     </div>
   );
 }
