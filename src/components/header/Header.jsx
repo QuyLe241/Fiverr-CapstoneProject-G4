@@ -6,28 +6,37 @@ import { pathDefault } from "../../common/path.js";
 import { DownOutlined, SmileOutlined } from "@ant-design/icons";
 import { Dropdown, Space, Button, Modal } from "antd";
 // import { Button, Modal } from 'antd';
-
 import "./header.scss";
 import LinkCustom from "../LinkCustom/LinkCustom.jsx";
 import FormSearchProduct from "../FormSearchProduct/FormSearchProduct.jsx";
 import IconEng from "./IconEng.jsx";
 import SetLanguage from "./SetLanguage.jsx";
-
-const items = [
-  {
-    key: "1",
-    label: <Link>item 1</Link>,
-  },
-  {
-    key: "2",
-    // danger: true,
-    label: <Link>item 2</Link>,
-  },
-];
+import LoginPage from "../../page/Login/LoginPage.jsx";
 
 const Header = () => {
-  // modal
+  const fiverrPro = [
+    {
+      key: "0",
+      label: <Link to={"#"}> item 1</Link>,
+    },
+    {
+      key: "1",
+      label: <Link to={"#"}> item2</Link>,
+    },
+  ];
 
+  const explore = [
+    {
+      key: "0",
+      label: <Link to={"/dang-nhap"}> ex1</Link>,
+    },
+    {
+      key: "1",
+      label: <Link to={"#"}> ex2</Link>,
+    },
+  ];
+
+  // modal
   const [isModalOpen, setIsModalOpen] = useState(false);
   const showModal = () => {
     setIsModalOpen(true);
@@ -56,7 +65,7 @@ const Header = () => {
           <nav className="header_navigation space-x-5">
             <Dropdown
               menu={{
-                items,
+                items: fiverrPro,
               }}
               trigger={["click"]}
               className="cursor-pointer py-2 px-4 hover:bg-gray-100 rounded-sm duration-300"
@@ -71,7 +80,7 @@ const Header = () => {
 
             <Dropdown
               menu={{
-                items,
+                items: explore,
               }}
               trigger={["click"]}
               className="cursor-pointer py-2 px-4 hover:bg-gray-100 rounded-sm duration-300"
