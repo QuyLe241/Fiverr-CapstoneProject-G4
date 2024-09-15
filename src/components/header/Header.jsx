@@ -21,7 +21,7 @@ const Header = () => {
     },
     {
       key: "1",
-      label: <Link to={"#"}> item2</Link>,
+      label: <Link to={"#"}> item 2</Link>,
     },
   ];
 
