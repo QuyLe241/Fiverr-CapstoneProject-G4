@@ -16,20 +16,12 @@ import SetLanguage from "./SetLanguage.jsx";
 const items = [
   {
     key: "1",
-    label: (
-      <a target="_blank" rel="noopener noreferrer" href="#">
-        1st menu item
-      </a>
-    ),
+    label: <Link>item 1</Link>,
   },
   {
     key: "2",
     // danger: true,
-    label: (
-      <a target="_blank" href="/dang-nhap">
-        2 item
-      </a>
-    ),
+    label: <Link>item 2</Link>,
   },
 ];
 
