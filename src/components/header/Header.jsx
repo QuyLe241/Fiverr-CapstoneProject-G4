@@ -21,18 +21,134 @@ const Header = () => {
     },
     {
       key: "1",
-      label: <NavLink to={pathDefault.proService}> item 2</NavLink>,
+      label: (
+        <NavLink to={pathDefault.proService}>
+          {" "}
+          <div
+            className="rounded-lg p-4 flex space-x-5"
+            style={{ border: "1px solid #e4e5e7" }}
+          >
+            <div className="flex justify-center items-center">
+              <i class="fa-solid fa-pen size-8"></i>
+            </div>
+            <div className="">
+              <span style={{ fontWeight: 600, fontSize: "15px" }}>
+                I want to offer Pro services
+              </span>
+              <p style={{ fontSize: "15px", color: "#62646a" }}>
+                I’d like to work on business projects as a <br /> Pro freelancer
+                or agency.
+              </p>
+            </div>
+          </div>
+        </NavLink>
+      ),
     },
   ];
 
   const explore = [
     {
       key: "0",
-      label: <Link to={"/dang-nhap"}> ex1</Link>,
+      label: (
+        <Link to={"/dang-nhap"}>
+          <div className="">
+            <span style={{ fontWeight: 600, fontSize: "15px", color: "" }}>
+              Answers
+            </span>
+            <p style={{ color: "#62646a" }}>
+              Powered by AI, answered by Fiverr freelancers
+            </p>
+          </div>
+        </Link>
+      ),
     },
     {
       key: "1",
-      label: <Link to={"#"}> ex2</Link>,
+      label: (
+        <Link to={"#"}>
+          <div className="">
+            <span style={{ fontWeight: 600, fontSize: "15px", color: "" }}>
+              Community
+            </span>
+            <p style={{ color: "#62646a" }}>
+              Connect with Fiverr’s team and community
+            </p>
+          </div>
+        </Link>
+      ),
+    },
+    {
+      key: "2",
+      label: (
+        <Link to={"#"}>
+          <div className="">
+            <span style={{ fontWeight: 600, fontSize: "15px", color: "" }}>
+              Guides
+            </span>
+            <p style={{ color: "#62646a" }}>
+              In-depth guides covering business topics
+            </p>
+          </div>
+        </Link>
+      ),
+    },
+    {
+      key: "3",
+      label: (
+        <Link to={"#"}>
+          <div className="">
+            <span style={{ fontWeight: 600, fontSize: "15px", color: "" }}>
+              Podcast
+            </span>
+            <p style={{ color: "#62646a" }}>
+              Inside tips from top business minds
+            </p>
+          </div>
+        </Link>
+      ),
+    },
+    {
+      key: "4",
+      label: (
+        <Link to={"#"}>
+          <div className="">
+            <span style={{ fontWeight: 600, fontSize: "15px", color: "" }}>
+              Learn
+            </span>
+            <p style={{ color: "#62646a" }}>
+              Professional online courses, led by experts
+            </p>
+          </div>
+        </Link>
+      ),
+    },
+    {
+      key: "5",
+      label: (
+        <Link to={"#"}>
+          <div className="">
+            <span style={{ fontWeight: 600, fontSize: "15px", color: "" }}>
+              Blog
+            </span>
+            <p style={{ color: "#62646a" }}>
+              News, information and community stories
+            </p>
+          </div>
+        </Link>
+      ),
+    },
+    {
+      key: "6",
+      label: (
+        <Link to={"#"}>
+          <div className="">
+            <span style={{ fontWeight: 600, fontSize: "15px", color: "" }}>
+              Logo Market
+            </span>
+            <p style={{ color: "#62646a" }}>Create your logo instantly</p>
+          </div>
+        </Link>
+      ),
     },
   ];
 
