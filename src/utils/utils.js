@@ -6,7 +6,7 @@ export const setLocalStorage = (key, value) => {
 };
 
 export const getLocalStorage = (key) => {
-    //      gọi đến localStorage và lấy dữ liệu lên
+  //      gọi đến localStorage và lấy dữ liệu lên
   const dataLocal = localStorage.getItem(key);
   return dataLocal ? JSON.parse(dataLocal) : null;
 };

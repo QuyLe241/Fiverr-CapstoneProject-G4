@@ -9,6 +9,17 @@ import GuideItem2 from "../../assets/Img/guide-item2.png";
 import GuideItem3 from "../../assets/Img/guide-item3.png";
 import GuideItem4 from "../../assets/Img/guide-item4.png";
 import GuideItem5 from "../../assets/Img/guide-item5.png";
+import Mof1 from "../../assets/Img/mof11.png";
+import Mof2 from "../../assets/Img/mof2.png";
+import Mof3 from "../../assets/Img/mof3.png";
+import Mof4 from "../../assets/Img/mof4.png";
+import Mof5 from "../../assets/Img/mof5.png";
+import Mof6 from "../../assets/Img/mof6.png";
+import Mof7 from "../../assets/Img/mof7.png";
+import Mof8 from "../../assets/Img/mof8.png";
+import Mof9 from "../../assets/Img/mof9.png";
+import Mof10 from "../../assets/Img/mof10.png";
+import Mof12 from "../../assets/Img/mof12.png";
 import Slider from "react-slick";
 
 const MadeOnFiverr = () => {
@@ -73,21 +84,51 @@ const MadeOnFiverr = () => {
         Made on Fiverr
       </h2>
       <div className="grid grid-cols-4 grid-rows-5 gap-3 my-3">
-        <div>1</div>
-        <div className="row-span-2">2</div>
-        <div className="row-span-3">3</div>
-        <div>4</div>
-        <div>5</div>
-        <div className="col-start-1 row-start-3">6</div>
-        <div className="row-span-2 col-start-1 row-start-4">7</div>
-        <div className="row-span-3 col-start-2 row-start-3">8</div>
-        <div className="row-span-2 col-start-4 row-start-2">9</div>
-        <div className="col-start-4 row-start-4">10</div>
-        <div className="row-span-2 col-start-3 row-start-4">11</div>
-        <div className="col-start-4 row-start-5">12</div>
+        <div>
+          <img src={Mof1} alt="" />
+        </div>
+        <div className="row-span-2">
+          <img src={Mof7} alt="" />
+        </div>
+        <div className="row-span-3">
+          <img src={Mof9} alt="" />
+        </div>
+        <div>
+          <img src={Mof3} alt="" />
+        </div>
+        <div>
+          <img src={Mof2} alt="" />
+        </div>
+        <div className="col-start-1 row-start-3">
+          <img src={Mof3} alt="" />
+        </div>
+        <div className="row-span-2 col-start-1 row-start-4">
+          <img src={Mof7} alt="" />
+        </div>
+        <div className="row-span-3 col-start-2 row-start-3">
+          <img src={Mof10} alt="" />
+        </div>
+        <div className="row-span-2 col-start-4 row-start-2 flex items-center">
+          <img src={Mof7} alt="" />
+        </div>
+        <div className="col-start-4 row-start-4">
+          <img src={Mof1} alt="" />
+        </div>
+        <div className="row-span-2 col-start-3 row-start-4">
+          <img src={Mof12} alt="" />
+        </div>
+        <div className="col-start-4 row-start-5 flex items-center">
+          <img src={Mof2} alt="" />
+        </div>
       </div>
       {/* Guides */}
+
       <div className="guides py-8 slider-container">
+        <div className="py-5 my-3">
+          <h3 style={{ fontSize: "45px", fontWeight: 600 }}>
+            Guides to help you grow
+          </h3>
+        </div>
         <Slider {...settings}>
           <div className="slide">
             <a href="">
