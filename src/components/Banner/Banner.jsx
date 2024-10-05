@@ -1,5 +1,5 @@
 import React from "react";
-import BannerImg from "../../assets/Img/Banner3.png";
+import BannerImg from "../../assets/Img/Banner0.png";
 import { Link, NavLink } from "react-router-dom";
 import Program from "../../assets/Img/program1.png";
 import Graphic from "../../assets/Img/graphic1.png";
@@ -20,9 +20,20 @@ const Banner = () => {
           backgroundImage: `url(${BannerImg})`,
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+          borderRadius: "18px",
         }}
-        className="banner h-[580px] w-full"
-      ></div>
+        className="banner h-[580px] w-full flex justify-center items-center"
+      >
+        <h1
+          className="px-5"
+          style={{ color: "#fff", fontSize: "60px", fontWeight: 600 }}
+        >
+          Find the right
+          <em style={{ color: "rgb(29, 191, 115)" }}> freelance</em> <br />
+          service, right away
+        </h1>
+      </div>
       <div className="listJob_item">
         {/* hover:bg-color 
         background: rgb(29,191,115);

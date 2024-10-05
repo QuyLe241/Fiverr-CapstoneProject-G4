@@ -15,7 +15,7 @@ import Iconset from "../../icon/Iconset";
 const Footer = () => {
   return (
     <div className="footer py-6">
-      <div className="container mx-auto px-2">
+      <div className=" container mx-auto px-2">
         <div className="footer_start pb-5 grid grid-cols-5 grid-rows-1 gap-10">
           <div className="footer_item">
             <div className="">

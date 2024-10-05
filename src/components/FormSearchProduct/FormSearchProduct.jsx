@@ -10,6 +10,7 @@ import { data } from "autoprefixer";
 import { DownOutlined, SmileOutlined } from "@ant-design/icons";
 import { Dropdown, Space } from "antd";
 import useDebounce from "../../hooks/UseDebounce";
+import "./style.scss";
 
 const FormSearchProduct = () => {
   const isResponsive = useResponsive({
@@ -103,10 +104,10 @@ const FormSearchProduct = () => {
         }}
         open={checkDropdown}
       >
-        <form action="" onSubmit={handleSubmit}>
+        <form className="form_search" action="" onSubmit={handleSubmit}>
           <div
             style={{ border: "3px solid" }}
-            className="ml-5 pl-4 rounded-md border border-gray-400 flex items-center justify-between min-w-[400px] max-w-[550px]"
+            className="search ml-5 pl-4 rounded-md border border-gray-400 flex items-center justify-between w-[390px] "
           >
             <input
               type="text"

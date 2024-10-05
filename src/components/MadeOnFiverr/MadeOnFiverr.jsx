@@ -20,6 +20,9 @@ import Mof8 from "../../assets/Img/mof8.png";
 import Mof9 from "../../assets/Img/mof9.png";
 import Mof10 from "../../assets/Img/mof10.png";
 import Mof12 from "../../assets/Img/mof12.png";
+import Mof13 from "../../assets/Img/mof13.png";
+import Mof14 from "../../assets/Img/mof14.png";
+import Mof15 from "../../assets/Img/mof15.png";
 import Slider from "react-slick";
 
 const MadeOnFiverr = () => {
@@ -80,45 +83,216 @@ const MadeOnFiverr = () => {
 
   return (
     <div className="container mx-auto px-2 my-3 pb-10">
-      <h2 className="mx-3 my-5" style={{ fontWeight: 400, fontSize: "46px" }}>
+      <h2
+        className="mx-3 mt-5 mb-3"
+        style={{ fontWeight: 600, fontSize: "45px" }}
+      >
         Made on Fiverr
       </h2>
-      <div className="grid grid-cols-4 grid-rows-5 gap-3 my-3">
-        <div>
-          <img src={Mof1} alt="" />
+      {/* layout */}
+      <div className="grid grid-cols-4 gap-3">
+        <div className="">
+          <div className="items">
+            <div className="child_items flex items-end">
+              <div className="child_items_content">
+                <p style={{ fontWeight: 500, color: "#fff" }}>
+                  Feature in: Logo Design
+                </p>
+                <span style={{ fontWeight: 500, color: "#fff" }} className="">
+                  by: LeNhatQuy
+                </span>
+              </div>
+            </div>
+            <img src={Mof1} alt="" />
+          </div>
+          <div className="items">
+            <div className="child_items flex items-end">
+              <div className="child_items_content">
+                <p style={{ fontWeight: 500, color: "#fff" }}>
+                  Feature in: Logo Design
+                </p>
+                <span style={{ fontWeight: 500, color: "#fff" }} className="">
+                  by:MacAnhHao
+                </span>
+              </div>
+            </div>
+            <img src={Mof2} alt="" />
+          </div>
+          <div className="items">
+            <div className="child_items flex items-end">
+              <div className="child_items_content">
+                <p style={{ fontWeight: 500, color: "#fff" }}>
+                  Feature in: Logo Design
+                </p>
+                <span style={{ fontWeight: 500, color: "#fff" }} className="">
+                  by: LeNhatQuy
+                </span>
+              </div>
+            </div>
+            <img src={Mof3} alt="" />
+          </div>
+          <div className="items">
+            <div className="child_items flex items-end">
+              <div className="child_items_content">
+                <p style={{ fontWeight: 500, color: "#fff" }}>
+                  Feature in: Logo Design
+                </p>
+                <span style={{ fontWeight: 500, color: "#fff" }} className="">
+                  by: MacAnhHao
+                </span>
+              </div>
+            </div>
+            <img src={Mof7} alt="" />
+          </div>
+          <div className="items">
+            <div className="child_items flex items-end">
+              <div className="child_items_content">
+                <p style={{ fontWeight: 500, color: "#fff" }}>
+                  Feature in: Logo Design
+                </p>
+                <span style={{ fontWeight: 500, color: "#fff" }} className="">
+                  by: LeNhatQuy
+                </span>
+              </div>
+            </div>
+            <img src={Mof15} alt="" />
+          </div>
         </div>
-        <div className="row-span-2">
-          <img src={Mof7} alt="" />
+        <div className="">
+          <div className="items">
+            <div className="child_items flex items-end">
+              <div className="child_items_content">
+                <p style={{ fontWeight: 500, color: "#fff" }}>
+                  Feature in: Logo Design
+                </p>
+                <span style={{ fontWeight: 500, color: "#fff" }} className="">
+                  by: MacAnhHao
+                </span>
+              </div>
+            </div>
+            <img src={Mof4} alt="" />
+          </div>
+          <div className="items">
+            <div className="child_items flex items-end">
+              <div className="child_items_content">
+                <p style={{ fontWeight: 500, color: "#fff" }}>
+                  Feature in: Logo Design
+                </p>
+                <span style={{ fontWeight: 500, color: "#fff" }} className="">
+                  by:LeNhatQuy
+                </span>
+              </div>
+            </div>
+            <img src={Mof6} alt="" />
+          </div>
+          <div className="items">
+            <div className="child_items flex items-end">
+              <div className="child_items_content">
+                <p style={{ fontWeight: 500, color: "#fff" }}>
+                  Feature in: Logo Design
+                </p>
+                <span style={{ fontWeight: 500, color: "#fff" }} className="">
+                  by: MacAnhHao
+                </span>
+              </div>
+            </div>
+            <img src={Mof8} alt="" />
+          </div>
+          <div className="items">
+            <div className="child_items flex items-end">
+              <div className="child_items_content">
+                <p style={{ fontWeight: 500, color: "#fff" }}>
+                  Feature in: Logo Design
+                </p>
+                <span style={{ fontWeight: 500, color: "#fff" }} className="">
+                  by: LeNhatQuy
+                </span>
+              </div>
+            </div>
+            <img src={Mof14} alt="" />
+          </div>
         </div>
-        <div className="row-span-3">
-          <img src={Mof9} alt="" />
+        <div className="">
+          <div className="items">
+            <div className="child_items flex items-end">
+              <div className="child_items_content">
+                <p style={{ fontWeight: 500, color: "#fff" }}>
+                  Feature in: Logo Design
+                </p>
+                <span style={{ fontWeight: 500, color: "#fff" }} className="">
+                  by: MacAnhHao
+                </span>
+              </div>
+            </div>
+            <img src={Mof9} alt="" />
+          </div>
+          <div className="items">
+            <div className="child_items flex items-end">
+              <div className="child_items_content">
+                <p style={{ fontWeight: 500, color: "#fff" }}>
+                  Feature in: Logo Design
+                </p>
+                <span style={{ fontWeight: 500, color: "#fff" }} className="">
+                  by: LeNhatQuy
+                </span>
+              </div>
+            </div>
+            <img src={Mof5} alt="" />
+          </div>
+          <div className="items">
+            <div className="child_items flex items-end">
+              <div className="child_items_content">
+                <p style={{ fontWeight: 500, color: "#fff" }}>
+                  Feature in: Logo Design
+                </p>
+                <span style={{ fontWeight: 500, color: "#fff" }} className="">
+                  by: MacAnhHao
+                </span>
+              </div>
+            </div>
+            <img src={Mof4} alt="" />
+          </div>
         </div>
-        <div>
-          <img src={Mof3} alt="" />
-        </div>
-        <div>
-          <img src={Mof2} alt="" />
-        </div>
-        <div className="col-start-1 row-start-3">
-          <img src={Mof3} alt="" />
-        </div>
-        <div className="row-span-2 col-start-1 row-start-4">
-          <img src={Mof7} alt="" />
-        </div>
-        <div className="row-span-3 col-start-2 row-start-3">
-          <img src={Mof10} alt="" />
-        </div>
-        <div className="row-span-2 col-start-4 row-start-2 flex items-center">
-          <img src={Mof7} alt="" />
-        </div>
-        <div className="col-start-4 row-start-4">
-          <img src={Mof1} alt="" />
-        </div>
-        <div className="row-span-2 col-start-3 row-start-4">
-          <img src={Mof12} alt="" />
-        </div>
-        <div className="col-start-4 row-start-5 flex items-center">
-          <img src={Mof2} alt="" />
+        <div className="">
+          <div className="items">
+            <div className="child_items flex items-end">
+              <div className="child_items_content">
+                <p style={{ fontWeight: 500, color: "#fff" }}>
+                  Feature in: Logo Design
+                </p>
+                <span style={{ fontWeight: 500, color: "#fff" }} className="">
+                  by: LeNhatQuy
+                </span>
+              </div>
+            </div>
+            <img src={Mof10} alt="" />
+          </div>
+          <div className="items">
+            <div className="child_items flex items-end">
+              <div className="child_items_content">
+                <p style={{ fontWeight: 500, color: "#fff" }}>
+                  Feature in: Logo Design
+                </p>
+                <span style={{ fontWeight: 500, color: "#fff" }} className="">
+                  by: MacAnhHao
+                </span>
+              </div>
+            </div>
+            <img src={Mof13} alt="" />
+          </div>
+          <div className="items">
+            <div className="child_items flex items-end">
+              <div className="child_items_content">
+                <p style={{ fontWeight: 500, color: "#fff" }}>
+                  Feature in: Logo Design
+                </p>
+                <span style={{ fontWeight: 500, color: "#fff" }} className="">
+                  by: LeNhatQuy
+                </span>
+              </div>
+            </div>
+            <img src={Mof12} alt="" />
+          </div>
         </div>
       </div>
       {/* Guides */}

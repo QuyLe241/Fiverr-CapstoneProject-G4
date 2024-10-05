@@ -168,7 +168,7 @@ const Header = () => {
     <header className="py-5 env_header" style={{ zIndex: "999" }}>
       <div className="container mx-auto px-2">
         <div
-          style={{ fontWeight: 600, fontSize: "17px" }}
+          style={{ fontWeight: 600, fontSize: "16px" }}
           className="header_content flex items-center justify-between"
         >
           <div className="header_logo flex items-center space-x-3">
