@@ -9,4 +9,6 @@ export const pathDefault = {
   createUser: "create-user",
   lookingToHire: "looking-to-hire",
   proService: "pro-services",
+  listJobsPage: "/list-jobs-page",
+  detail: "/cong-viec-chi-tiet",
 };

@@ -39,6 +39,7 @@ const FormSearchProduct = () => {
     event.preventDefault();
     navigate(`${pathDefault.listJob}?tenCongViec=${valueSearch}`);
     // console.log(valueSearch);
+    setCheckDropdown(false);
   };
 
   //    debounce set thời gian gọi Api
@@ -62,7 +63,7 @@ const FormSearchProduct = () => {
                 key: index,
                 label: (
                   <Link
-                    to={`/cong-viec-chi-tiet=${item.id}`}
+                    to={`${pathDefault.detail}?deTail=${item.id}`}
                     className="flex items-center space-x-4"
                   >
                     <img src={item.congViec.hinhAnh} className="h-14" alt="" />

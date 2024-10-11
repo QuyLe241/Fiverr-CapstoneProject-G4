@@ -1,5 +1,6 @@
 import React from "react";
 import BannerImg from "../../assets/Img/Banner0.png";
+import { pathDefault } from "../../common/path";
 import { Link, NavLink } from "react-router-dom";
 import Program from "../../assets/Img/program1.png";
 import Graphic from "../../assets/Img/graphic1.png";
@@ -43,7 +44,11 @@ const Banner = () => {
           <div className="shadow-lg rounded-xl item" style={{ height: "" }}> */}
         <div className="grid grid-cols-9 my-12 grid-rows-1 gap-3 env_item">
           <div className="shadow-lg rounded-xl box item" style={{ height: "" }}>
-            <Link className={""} style={{ height: "" }}>
+            <Link
+              to={pathDefault.listJobsPage}
+              className={""}
+              style={{ height: "" }}
+            >
               <div className="" style={{ height: "" }}>
                 <img src={Program} className="ml-3 mt-3" alt="" />
               </div>
@@ -51,7 +56,7 @@ const Banner = () => {
             </Link>
           </div>
           <div className="shadow-lg rounded-xl item">
-            <Link className={""}>
+            <Link to={pathDefault.listJobsPage} className={""}>
               <div className="">
                 <img src={Graphic} className="ml-3 mt-3" alt="" />
               </div>
@@ -59,7 +64,7 @@ const Banner = () => {
             </Link>
           </div>
           <div className="shadow-lg rounded-xl item">
-            <Link className={""}>
+            <Link to={pathDefault.listJobsPage} className={""}>
               <div className="">
                 <img src={Digital} className="ml-3 mt-3" alt="" />
               </div>
@@ -67,7 +72,7 @@ const Banner = () => {
             </Link>
           </div>
           <div className="shadow-lg rounded-xl item">
-            <Link className={"shadow-lg"}>
+            <Link to={pathDefault.listJobsPage} className={"shadow-lg"}>
               <div className="">
                 <img src={Writing} className="ml-3 mt-3" alt="" />
               </div>
@@ -75,7 +80,7 @@ const Banner = () => {
             </Link>
           </div>
           <div className="shadow-lg rounded-xl item">
-            <Link className={"shadow-lg"}>
+            <Link to={pathDefault.listJobsPage} className={"shadow-lg"}>
               <div className="">
                 <img src={Video} className="ml-3 mt-3" alt="" />
               </div>
@@ -83,7 +88,7 @@ const Banner = () => {
             </Link>
           </div>
           <div className="shadow-lg rounded-xl item">
-            <Link className={"shadow-lg"}>
+            <Link to={pathDefault.listJobsPage} className={"shadow-lg"}>
               <div className="">
                 <img src={AiService} className="ml-3 mt-3" alt="" />
               </div>
@@ -91,7 +96,7 @@ const Banner = () => {
             </Link>
           </div>
           <div className="shadow-lg rounded-xl item">
-            <Link className={"shadow-lg"}>
+            <Link to={pathDefault.listJobsPage} className={"shadow-lg"}>
               <div className="">
                 <img src={Music} className="ml-3 mt-3" alt="" />
               </div>
@@ -99,7 +104,7 @@ const Banner = () => {
             </Link>
           </div>
           <div className="shadow-lg rounded-xl item">
-            <Link className={"shadow-lg"}>
+            <Link to={pathDefault.listJobsPage} className={"shadow-lg"}>
               <div className="">
                 <img src={Business} className="ml-3 mt-3" alt="" />
               </div>
@@ -107,7 +112,7 @@ const Banner = () => {
             </Link>
           </div>
           <div className="shadow-lg rounded-xl item">
-            <Link className={"shadow-lg"}>
+            <Link to={pathDefault.listJobsPage} className={"shadow-lg"}>
               <div className="">
                 <img src={Consul} className="ml-3 mt-3" alt="" />
               </div>

@@ -16,6 +16,8 @@ import Content from "../components/Content/Content";
 import Body from "../components/Body/Body";
 import LookingToHire from "../components/LookingToHire/LookingToHire";
 import ProSerVice from "../components/ProService/ProSerVice";
+import ListJobsPage from "../page/InfoListJobPage/ListJobsPage";
+import DeTailsJobs from "../components/DetailJobs.jsx/DeTailsJobs";
 
 //    giảm lưu lượng file JS cần tải, khi người chưa cần vào trang quan trọng
 //    lazy và suspense(cấu hình ở element)
@@ -31,6 +33,14 @@ const UseRoutesCustom = () => {
         {
           path: pathDefault.listJob,
           element: <ListJobPage />,
+        },
+        {
+          path: pathDefault.listJobsPage,
+          element: <ListJobsPage />,
+        },
+        {
+          path: pathDefault.detail,
+          element: <DeTailsJobs />,
         },
         {
           index: true,
