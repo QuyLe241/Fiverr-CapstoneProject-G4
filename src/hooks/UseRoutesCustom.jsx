@@ -18,6 +18,7 @@ import LookingToHire from "../components/LookingToHire/LookingToHire";
 import ProSerVice from "../components/ProService/ProSerVice";
 import ListJobsPage from "../page/InfoListJobPage/ListJobsPage";
 import DeTailsJobs from "../components/DetailJobs.jsx/DeTailsJobs";
+import PageNotFound from "../page/PageNotFound/PageNotFound";
 
 //    giảm lưu lượng file JS cần tải, khi người chưa cần vào trang quan trọng
 //    lazy và suspense(cấu hình ở element)
@@ -89,6 +90,10 @@ const UseRoutesCustom = () => {
     {
       path: pathDefault.adminLogin,
       element: <AdminLogin />,
+    },
+    {
+      path: "*",
+      element: <PageNotFound />,
     },
   ]);
   return routes;

@@ -53,7 +53,7 @@ const FormSearchProduct = () => {
       congViecService
         .layCongViecTheoTen(valueSearch)
         .then((res) => {
-          console.log(res);
+          // console.log(res);
           //    tạo ra 1 biến và cắt 4 phần tử đầu tiên từ Api trả về. map để tạo ra product
           const newListJobSuggest = res.data.content
             .slice(0, 4)
@@ -63,7 +63,7 @@ const FormSearchProduct = () => {
                 key: index,
                 label: (
                   <Link
-                    to={`${pathDefault.detail}?deTail=${item.id}`}
+                    to={`${pathDefault.detail}?detail=${item.id}`}
                     className="flex items-center space-x-4"
                   >
                     <img src={item.congViec.hinhAnh} className="h-14" alt="" />

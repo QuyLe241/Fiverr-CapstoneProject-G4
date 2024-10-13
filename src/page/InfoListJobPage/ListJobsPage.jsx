@@ -35,7 +35,7 @@ const ListJobsPage = () => {
               //   console.log(item);
               return (
                 <div className="my-3 py-2" key={index}>
-                  <Link to={`${pathDefault.detail}?deTail=${item.id}`}>
+                  <Link to={`${pathDefault.detail}?detail=${item.id}`}>
                     <div className="">
                       <div className="image_jobs">
                         <img

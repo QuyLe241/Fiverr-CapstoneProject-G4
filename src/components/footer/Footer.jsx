@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import logoFooter from "../../assets/svg/logoFooter.svg";
 import "./style.scss";
+import { Dropdown, Space, Button, Modal } from "antd";
 import { Link } from "react-router-dom";
 import IconLogoFooter from "../../icon/IconLogoFooter";
 import IconTiktok from "../../icon/IconTiktok";
@@ -11,8 +12,20 @@ import IconPinteres from "../../icon/IconPinteres";
 import IconX from "../../icon/IconX";
 import IconLinked from "../../icon/IconLinked";
 import Iconset from "../../icon/Iconset";
+import SetLanguage from "../header/SetLanguage";
 
 const Footer = () => {
+  // modal
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+  const handleOk = () => {
+    setIsModalOpen(false);
+  };
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
   return (
     <div className="footer py-6">
       <div className=" container mx-auto px-2">
@@ -261,12 +274,20 @@ const Footer = () => {
               </ul>
             </div>
             <div className="space-x-5 flex items-center setting">
-              <button>
+              <button onClick={showModal}>
                 {" "}
                 <i class="fa-solid fa-globe"></i>
                 <span className="ml-2">English</span>
               </button>
-              <button>US$ USD</button>
+              <Modal
+                title="Select your preferences"
+                open={isModalOpen}
+                onOk={handleOk}
+                onCancel={handleCancel}
+              >
+                <SetLanguage />
+              </Modal>
+              <button onClick={showModal}>US$ USD</button>
               <button>
                 <Iconset />
               </button>

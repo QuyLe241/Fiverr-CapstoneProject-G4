@@ -24,6 +24,8 @@ import Mof13 from "../../assets/Img/mof13.png";
 import Mof14 from "../../assets/Img/mof14.png";
 import Mof15 from "../../assets/Img/mof15.png";
 import Slider from "react-slick";
+import ChevronRight from "./Arrow/ChevronRight.jsx";
+import ChevronLeft from "./Arrow/ChevronLeft.jsx";
 
 const MadeOnFiverr = () => {
   const contentStyle = {
@@ -35,42 +37,46 @@ const MadeOnFiverr = () => {
     background: "#364d79",
   };
 
+  const styleArrowRight = {
+    position: "absolute",
+    right: "20px",
+    top: "50%",
+    backgroundColor: "#fff",
+    padding: "12px",
+    borderRadius: "50%",
+  };
+  const styleArrowLeft = {
+    position: "absolute",
+    left: "20px",
+    top: "50%",
+    backgroundColor: "#fff",
+    padding: "12px",
+    borderRadius: "50%",
+    zIndex: "2",
+  };
+
   function SampleNextArrow(props) {
-    const { className, style, onClick } = props;
+    const { onClick } = props;
     return (
       <div
-        className={className}
-        style={{
-          ...style,
-          left: "",
-          right: "20px",
-          display: "block",
-          fontSize: "15px",
-          // borderRadius: "50%",
-        }}
+        className="cursor-pointer hover:bg-slate-500"
+        style={styleArrowRight}
         onClick={onClick}
-      />
+      >
+        <ChevronRight height={"15px"} width={"15px"} />
+      </div>
     );
   }
-
   function SamplePrevArrow(props) {
-    const { className, style, onClick } = props;
+    const { onClick } = props;
     return (
       <div
-        className={className}
-        style={{
-          ...style,
-          display: "block",
-          right: "",
-          left: "20px",
-          zIndex: "10",
-          // background: "white",
-          // padding: "10px",
-          fontSize: "15px",
-          // borderRadius: "50%",
-        }}
+        className="cursor-pointer hover:bg-slate-500"
+        style={styleArrowLeft}
         onClick={onClick}
-      />
+      >
+        <ChevronLeft width={"15px"} height={"15px"} />
+      </div>
     );
   }
   const settings = {
@@ -82,7 +88,7 @@ const MadeOnFiverr = () => {
   };
 
   return (
-    <div className="container mx-auto px-2 my-3 pb-10">
+    <div className="container mx-auto px-2 my-3 pb-10 ">
       <h2
         className="mx-3 mt-5 mb-3"
         style={{ fontWeight: 600, fontSize: "45px" }}
@@ -99,7 +105,7 @@ const MadeOnFiverr = () => {
                   Feature in: Logo Design
                 </p>
                 <span style={{ fontWeight: 500, color: "#fff" }} className="">
-                  by: LeNhatQuy
+                  by: armisbahuddin
                 </span>
               </div>
             </div>
@@ -112,7 +118,7 @@ const MadeOnFiverr = () => {
                   Feature in: Logo Design
                 </p>
                 <span style={{ fontWeight: 500, color: "#fff" }} className="">
-                  by:MacAnhHao
+                  by: janellechoi
                 </span>
               </div>
             </div>
@@ -125,7 +131,7 @@ const MadeOnFiverr = () => {
                   Feature in: Logo Design
                 </p>
                 <span style={{ fontWeight: 500, color: "#fff" }} className="">
-                  by: LeNhatQuy
+                  by: armisbahuddin
                 </span>
               </div>
             </div>
@@ -138,7 +144,7 @@ const MadeOnFiverr = () => {
                   Feature in: Logo Design
                 </p>
                 <span style={{ fontWeight: 500, color: "#fff" }} className="">
-                  by: MacAnhHao
+                  by: janellechoi
                 </span>
               </div>
             </div>
@@ -151,7 +157,7 @@ const MadeOnFiverr = () => {
                   Feature in: Logo Design
                 </p>
                 <span style={{ fontWeight: 500, color: "#fff" }} className="">
-                  by: LeNhatQuy
+                  by: armisbahuddin
                 </span>
               </div>
             </div>
@@ -166,7 +172,7 @@ const MadeOnFiverr = () => {
                   Feature in: Logo Design
                 </p>
                 <span style={{ fontWeight: 500, color: "#fff" }} className="">
-                  by: MacAnhHao
+                  by: janellechoi
                 </span>
               </div>
             </div>
@@ -179,7 +185,7 @@ const MadeOnFiverr = () => {
                   Feature in: Logo Design
                 </p>
                 <span style={{ fontWeight: 500, color: "#fff" }} className="">
-                  by:LeNhatQuy
+                  by: dynamostudioo
                 </span>
               </div>
             </div>
@@ -192,7 +198,7 @@ const MadeOnFiverr = () => {
                   Feature in: Logo Design
                 </p>
                 <span style={{ fontWeight: 500, color: "#fff" }} className="">
-                  by: MacAnhHao
+                  by: janellechoi
                 </span>
               </div>
             </div>
@@ -205,7 +211,7 @@ const MadeOnFiverr = () => {
                   Feature in: Logo Design
                 </p>
                 <span style={{ fontWeight: 500, color: "#fff" }} className="">
-                  by: LeNhatQuy
+                  by: dynamostudioo
                 </span>
               </div>
             </div>
@@ -220,7 +226,7 @@ const MadeOnFiverr = () => {
                   Feature in: Logo Design
                 </p>
                 <span style={{ fontWeight: 500, color: "#fff" }} className="">
-                  by: MacAnhHao
+                  by: dynamostudioo
                 </span>
               </div>
             </div>
@@ -233,7 +239,7 @@ const MadeOnFiverr = () => {
                   Feature in: Logo Design
                 </p>
                 <span style={{ fontWeight: 500, color: "#fff" }} className="">
-                  by: LeNhatQuy
+                  by: dynamostudioo
                 </span>
               </div>
             </div>
@@ -246,7 +252,7 @@ const MadeOnFiverr = () => {
                   Feature in: Logo Design
                 </p>
                 <span style={{ fontWeight: 500, color: "#fff" }} className="">
-                  by: MacAnhHao
+                  by: dynamostudioo
                 </span>
               </div>
             </div>
@@ -261,7 +267,7 @@ const MadeOnFiverr = () => {
                   Feature in: Logo Design
                 </p>
                 <span style={{ fontWeight: 500, color: "#fff" }} className="">
-                  by: LeNhatQuy
+                  by: dynamostudioo
                 </span>
               </div>
             </div>

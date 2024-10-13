@@ -14,6 +14,7 @@ const ListJobPage = () => {
   const navigate = useNavigate();
   useEffect(() => {
     let tenCongViec = searchParam.get("tenCongViec");
+    console.log(tenCongViec);
     congViecService
       .layCongViecTheoTen(tenCongViec)
       .then((res) => {
@@ -31,10 +32,10 @@ const ListJobPage = () => {
       <div className="container my-5 mx-auto px-2 grid grid-cols-4 gap-5">
         {/*  */}
         {listJob.map((item, index) => {
-          console.log(item);
+          // console.log(item);
           return (
             <div className="" key={index}>
-              <Link to={`${pathDefault.detail}?=${item.id}`}>
+              <Link to={`${pathDefault.detail}?detail=${item.id}`}>
                 <img
                   className="w-full rounded-lg"
                   src={item.congViec.hinhAnh}
