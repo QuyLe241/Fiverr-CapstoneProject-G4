@@ -9,6 +9,9 @@ import CheckIcon from "./Icon/CheckIcon";
 import StarRate from "./Icon/StarRate";
 import Ktm from "../../assets/Img/ktm.png";
 import Fiverrimglogo from "../../assets/Img/fiverrimglogo.png";
+import { Tabs } from "antd";
+import TickIcon from "./Icon/TickIcon";
+import ArrowIcon from "./Icon/ArrowIcon";
 
 const DeTailsJobs = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -31,6 +34,430 @@ const DeTailsJobs = () => {
         // console.log(err);
       });
   }, [searchParams]);
+
+  //  Tabs
+  const onChange = (key) => {
+    console.log(key);
+  };
+  const items = [
+    {
+      key: "1",
+      label: (
+        <div className="label_tab flex items-center justify-center">
+          <span>Basic</span>
+        </div>
+      ),
+      children: (
+        <div className="">
+          {listJob.map((item, index) => {
+            let money = item.congViec.giaTien;
+            return (
+              <div className="px-3" key={index}>
+                <div className="">
+                  <h3 className="font-bold " style={{ fontSize: "20px" }}>
+                    US{" "}
+                    {money.toLocaleString("en-US", {
+                      style: "currency",
+                      currency: "USD",
+                    })}
+                  </h3>
+                  <p className="font-semibold" style={{ fontSize: "15px" }}>
+                    Save up to 15% with{" "}
+                    <span style={{ color: "#026a5d", fontSize: "18px" }}>
+                      Subscribe to Save
+                    </span>
+                  </p>
+                </div>
+                <div className="py-3">
+                  <p className="font-semibold" style={{ color: "#222325" }}>
+                    <span
+                      className="font-semibold"
+                      style={{ fontSize: "17px" }}
+                    >
+                      Calm Cove Collection
+                    </span>{" "}
+                    <span className="text-green-600">30 Days</span> Management |
+                    | 12 SEO POSTS (9 Static, 3 Reels) | Caption, Hashtags &
+                    Emoji
+                  </p>
+                </div>
+                <div className="">
+                  <div className="flex justify-around font-bold py-2">
+                    <p>14-day delivery</p>
+                    <p>Unlimited Revisions</p>
+                  </div>
+                  <div className="space-y-2 py-3">
+                    <div className="flex items-center">
+                      <TickIcon
+                        width={"15px"}
+                        height={"15px"}
+                        fill={"currentFill"}
+                      />
+                      <span
+                        className="font-semibold ml-3"
+                        style={{ color: "#95979d" }}
+                      >
+                        2 platforms
+                      </span>
+                    </div>
+                    <div className="flex items-center">
+                      <TickIcon
+                        width={"15px"}
+                        height={"15px"}
+                        fill={"currentFill"}
+                      />
+                      <span
+                        className="font-semibold ml-3"
+                        style={{ color: "#95979d" }}
+                      >
+                        Page/channel evaluation
+                      </span>
+                    </div>
+                    <div className="flex items-center">
+                      <TickIcon
+                        width={"15px"}
+                        height={"15px"}
+                        fill={"currentFill"}
+                      />
+                      <span
+                        className="font-semibold ml-3"
+                        style={{ color: "#95979d" }}
+                      >
+                        2 platforms
+                      </span>
+                    </div>
+                    <div className="flex items-center">
+                      <TickIcon
+                        width={"15px"}
+                        height={"15px"}
+                        fill={"currentFill"}
+                      />
+                      <span
+                        className="font-semibold ml-3"
+                        style={{ color: "#95979d" }}
+                      >
+                        Page/channel evaluation
+                      </span>
+                    </div>
+                    <div className="flex items-center">
+                      <TickIcon
+                        width={"15px"}
+                        height={"15px"}
+                        fill={"currentFill"}
+                      />
+                      <span
+                        className="font-semibold ml-3"
+                        style={{ color: "#95979d" }}
+                      >
+                        Engagement with followers
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div className="space-y-5 py-5">
+                  <div className="flex justify-center">
+                    <button
+                      style={{ border: "1px black solid" }}
+                      className="flex items-center justify-center bg-black text-white w-3/4 py-2 rounded-lg font-bold hover:bg-slate-100 hover:text-black duration-500"
+                    >
+                      Continue{" "}
+                      {/* <ArrowIcon width={"16px"} height={"16px"} fill={""} /> */}
+                    </button>
+                  </div>
+                  <div className="flex justify-center ">
+                    <button
+                      className="w-3/4 rounded-lg py-2 font-semibold hover:bg-black hover:text-white duration-500"
+                      style={{ border: "1px black solid" }}
+                    >
+                      Contact me
+                    </button>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      ),
+    },
+    {
+      key: "2",
+      label: (
+        <div className="label_tab flex items-center justify-center">
+          <span>Standard</span>
+        </div>
+      ),
+      children: (
+        <div className="">
+          {listJob.map((item, index) => {
+            let money = item.congViec.giaTien * 2;
+            return (
+              <div className="px-3" key={index}>
+                <div className="">
+                  <h3 className="font-bold " style={{ fontSize: "20px" }}>
+                    US{" "}
+                    {money.toLocaleString("en-US", {
+                      style: "currency",
+                      currency: "USD",
+                    })}
+                  </h3>
+                  <p className="font-semibold" style={{ fontSize: "15px" }}>
+                    Save up to 15% with{" "}
+                    <span style={{ color: "#026a5d", fontSize: "18px" }}>
+                      Subscribe to Save
+                    </span>
+                  </p>
+                </div>
+                <div className="py-3">
+                  <p className="font-semibold" style={{ color: "#222325" }}>
+                    <span
+                      className="font-semibold"
+                      style={{ fontSize: "17px" }}
+                    >
+                      Calm Cove Collection
+                    </span>{" "}
+                    <span className="text-green-600">30 Days</span> Management |
+                    | 12 SEO POSTS (9 Static, 3 Reels) | Caption, Hashtags &
+                    Emoji
+                  </p>
+                </div>
+                <div className="">
+                  <div className="flex justify-around font-bold py-2">
+                    <p>21-day delivery</p>
+                    <p>Unlimited Revisions</p>
+                  </div>
+                  <div className="space-y-2 py-3">
+                    <div className="flex items-center">
+                      <TickIcon
+                        width={"15px"}
+                        height={"15px"}
+                        fill={"currentFill"}
+                      />
+                      <span
+                        className="font-semibold ml-3"
+                        style={{ color: "#95979d" }}
+                      >
+                        2 platforms
+                      </span>
+                    </div>
+                    <div className="flex items-center">
+                      <TickIcon
+                        width={"15px"}
+                        height={"15px"}
+                        fill={"currentFill"}
+                      />
+                      <span
+                        className="font-semibold ml-3"
+                        style={{ color: "#95979d" }}
+                      >
+                        Page/channel evaluation
+                      </span>
+                    </div>
+                    <div className="flex items-center">
+                      <TickIcon
+                        width={"15px"}
+                        height={"15px"}
+                        fill={"currentFill"}
+                      />
+                      <span
+                        className="font-semibold ml-3"
+                        style={{ color: "#95979d" }}
+                      >
+                        2 platforms
+                      </span>
+                    </div>
+                    <div className="flex items-center">
+                      <TickIcon
+                        width={"15px"}
+                        height={"15px"}
+                        fill={"currentFill"}
+                      />
+                      <span
+                        className="font-semibold ml-3"
+                        style={{ color: "#95979d" }}
+                      >
+                        Page/channel evaluation
+                      </span>
+                    </div>
+                    <div className="flex items-center">
+                      <TickIcon
+                        width={"15px"}
+                        height={"15px"}
+                        fill={"currentFill"}
+                      />
+                      <span
+                        className="font-semibold ml-3"
+                        style={{ color: "#95979d" }}
+                      >
+                        Engagement with followers
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div className="space-y-5 py-5">
+                  <div className="flex justify-center">
+                    <button
+                      style={{ border: "1px black solid" }}
+                      className="flex items-center justify-center bg-black text-white w-3/4 py-2 rounded-lg font-bold hover:bg-slate-100 hover:text-black duration-500"
+                    >
+                      Continue{" "}
+                      {/* <ArrowIcon width={"16px"} height={"16px"} fill={""} /> */}
+                    </button>
+                  </div>
+                  <div className="flex justify-center ">
+                    <button
+                      className="w-3/4 rounded-lg py-2 font-semibold hover:bg-black hover:text-white duration-500"
+                      style={{ border: "1px black solid" }}
+                    >
+                      Contact me
+                    </button>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      ),
+    },
+    {
+      key: "3",
+      label: (
+        <div className="label_tab flex items-center justify-center">
+          <span>Premium</span>
+        </div>
+      ),
+      children: (
+        <div className="">
+          {listJob.map((item, index) => {
+            let money = item.congViec.giaTien * 3;
+            return (
+              <div className="px-3" key={index}>
+                <div className="">
+                  <h3 className="font-bold " style={{ fontSize: "20px" }}>
+                    US{" "}
+                    {money.toLocaleString("en-US", {
+                      style: "currency",
+                      currency: "USD",
+                    })}
+                  </h3>
+                  <p className="font-semibold" style={{ fontSize: "15px" }}>
+                    Save up to 15% with{" "}
+                    <span style={{ color: "#026a5d", fontSize: "18px" }}>
+                      Subscribe to Save
+                    </span>
+                  </p>
+                </div>
+                <div className="py-3">
+                  <p className="font-semibold" style={{ color: "#222325" }}>
+                    <span
+                      className="font-semibold"
+                      style={{ fontSize: "17px" }}
+                    >
+                      Calm Cove Collection
+                    </span>{" "}
+                    <span className="text-green-600">30 Days</span> Management |
+                    | 12 SEO POSTS (9 Static, 3 Reels) | Caption, Hashtags &
+                    Emoji
+                  </p>
+                </div>
+                <div className="">
+                  <div className="flex justify-around font-bold py-2">
+                    <p>30-day delivery</p>
+                    <p>Unlimited Revisions</p>
+                  </div>
+                  <div className="space-y-2 py-3">
+                    <div className="flex items-center">
+                      <TickIcon
+                        width={"15px"}
+                        height={"15px"}
+                        fill={"currentFill"}
+                      />
+                      <span
+                        className="font-semibold ml-3"
+                        style={{ color: "#95979d" }}
+                      >
+                        2 platforms
+                      </span>
+                    </div>
+                    <div className="flex items-center">
+                      <TickIcon
+                        width={"15px"}
+                        height={"15px"}
+                        fill={"currentFill"}
+                      />
+                      <span
+                        className="font-semibold ml-3"
+                        style={{ color: "#95979d" }}
+                      >
+                        Page/channel evaluation
+                      </span>
+                    </div>
+                    <div className="flex items-center">
+                      <TickIcon
+                        width={"15px"}
+                        height={"15px"}
+                        fill={"currentFill"}
+                      />
+                      <span
+                        className="font-semibold ml-3"
+                        style={{ color: "#95979d" }}
+                      >
+                        2 platforms
+                      </span>
+                    </div>
+                    <div className="flex items-center">
+                      <TickIcon
+                        width={"15px"}
+                        height={"15px"}
+                        fill={"currentFill"}
+                      />
+                      <span
+                        className="font-semibold ml-3"
+                        style={{ color: "#95979d" }}
+                      >
+                        Page/channel evaluation
+                      </span>
+                    </div>
+                    <div className="flex items-center">
+                      <TickIcon
+                        width={"15px"}
+                        height={"15px"}
+                        fill={"currentFill"}
+                      />
+                      <span
+                        className="font-semibold ml-3"
+                        style={{ color: "#95979d" }}
+                      >
+                        Engagement with followers
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div className="space-y-5 py-5">
+                  <div className="flex justify-center">
+                    <button
+                      style={{ border: "1px black solid" }}
+                      className="flex items-center justify-center bg-black text-white w-3/4 py-2 rounded-lg font-bold hover:bg-slate-100 hover:text-black duration-500"
+                    >
+                      Continue{" "}
+                      {/* <ArrowIcon width={"16px"} height={"16px"} fill={""} /> */}
+                    </button>
+                  </div>
+                  <div className="flex justify-center ">
+                    <button
+                      className="w-3/4 rounded-lg py-2 font-semibold hover:bg-black hover:text-white duration-500"
+                      style={{ border: "1px black solid" }}
+                    >
+                      Contact me
+                    </button>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      ),
+    },
+  ];
   return (
     <div className="container px-1 mx-auto">
       {listJob.map((item, index) => {
@@ -64,7 +491,9 @@ const DeTailsJobs = () => {
             </div>
             <div className="flex space-x-5">
               <div className="w-3/5 content_left pr-5 my-3 pb-5">
-                <h3 className="font-bold">{item.congViec.tenCongViec}</h3>
+                <h3 className="font-bold" style={{ fontSize: "22px" }}>
+                  {item.congViec.tenCongViec}
+                </h3>
                 <div className="flex info_creater space-x-5 py-3">
                   <div className="">
                     <img
@@ -149,7 +578,7 @@ const DeTailsJobs = () => {
                   </div>
                 </div>
 
-                <div className="">
+                <div className="py-3">
                   <div className="flex justify-center py-1 content_img">
                     <img
                       className="img_job rounded-md"
@@ -160,24 +589,42 @@ const DeTailsJobs = () => {
                   </div>
                 </div>
 
-                <div className="decsription">
+                <div className="decsription mt-5 py-3">
                   <div className="">
-                    <h3>About this gig</h3>
+                    <h3
+                      className="font-semibold my-5"
+                      style={{ fontSize: "18px" }}
+                    >
+                      About this gig
+                    </h3>
                   </div>
-                  <div className="">{item.congViec.moTa}</div>
+                  <div
+                    className="pb-5 font-semibold"
+                    style={{ color: "#62646a" }}
+                  >
+                    {item.congViec.moTa}
+                  </div>
                 </div>
 
-                <div className="works_it">
+                <div className="works_it rounded-lg py-6">
                   <div className="title">
-                    <h4>How it works</h4>
+                    <h4
+                      className="font-semibold py-1"
+                      style={{ fontSize: "20px" }}
+                    >
+                      How it works
+                    </h4>
                   </div>
                   <div className="">
-                    <p>
+                    <p
+                      className="font-semibold py-1"
+                      style={{ fontSize: "", color: "#62646a" }}
+                    >
                       Here are the steps to complete your{" "}
                       <span>Basic package</span> project:
                     </p>
                   </div>
-                  <div className="list space-y-5 px-5">
+                  <div className="list space-y-5 px-5 py-3">
                     <div className="list_decs flex space-x-3">
                       <div className="">
                         <div className="number flex items-center">
@@ -248,9 +695,11 @@ const DeTailsJobs = () => {
                   </div>
                 </div>
 
-                <div className="">
-                  <div className="">
-                    <h3>Get to</h3>
+                <div className="pt-3">
+                  <div className="ml-3">
+                    <h3 className="font-semibold" style={{ fontSize: "18px" }}>
+                      Get to
+                    </h3>
                   </div>
                   <div className="flex info_creater space-x-5 py-3">
                     <div className="">
@@ -432,7 +881,15 @@ const DeTailsJobs = () => {
                 </div>
               </div>
 
-              <div className="w-2/5 content_right"></div>
+              <div className="w-2/5 content_right">
+                <div className="sidebar_content w-3/4">
+                  <Tabs
+                    defaultActiveKey="1"
+                    items={items}
+                    onChange={onChange}
+                  />
+                </div>
+              </div>
             </div>
           </div>
         );

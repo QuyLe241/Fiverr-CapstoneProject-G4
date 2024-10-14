@@ -77,3 +77,21 @@
     color: #62646a;
     font-weight: 600;
 }
+
+.works_it  {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, .14);
+}
+
+.content_right .sidebar_content {
+    border: 1px rgb(218, 219, 221) solid;
+}
+
+
+.container .content_right .sidebar_content .ant-tabs .ant-tabs-nav .ant-tabs-nav-wrap  {
+    display: flex;
+    justify-content: space-around;
+}
+
+.label_tab {
+    font-size: 16px;
+}

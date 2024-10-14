@@ -4,7 +4,7 @@ import UserTemplate from "../templates/UserTemplate/UserTemplate";
 import { pathDefault } from "../common/path";
 import RegisterPage from "../page/Register/RegisterPage";
 import LoginPage from "../page/Login/LoginPage";
-import ListJobPage from "../page/ListJobPage/ListJobPage";
+// import ListJobPage from "../page/ListJobPage/ListJobPage";
 import AdminTemplate from "../templates/AdminTemplate/AdminTemplate";
 import AdminLogin from "../page/AdminLogin/AdminLogin";
 // import ManagerUser from "../page/ManagerUser/ManagerUser";
@@ -16,14 +16,19 @@ import Content from "../components/Content/Content";
 import Body from "../components/Body/Body";
 import LookingToHire from "../components/LookingToHire/LookingToHire";
 import ProSerVice from "../components/ProService/ProSerVice";
-import ListJobsPage from "../page/InfoListJobPage/ListJobsPage";
+// import ListJobsPage from "../page/InfoListJobPage/ListJobsPage";
 import DeTailsJobs from "../components/DetailJobs.jsx/DeTailsJobs";
 import PageNotFound from "../page/PageNotFound/PageNotFound";
+import LoadingSpin from "../components/Loading/LoadingSpin";
 
 //    giảm lưu lượng file JS cần tải, khi người chưa cần vào trang quan trọng
 //    lazy và suspense(cấu hình ở element)
 //
 const ManagerUser = React.lazy(() => import("../page/ManagerUser/ManagerUser"));
+const ListJobsPage = React.lazy(() =>
+  import("../page/InfoListJobPage/ListJobsPage")
+);
+const ListJobPage = React.lazy(() => import("../page/ListJobPage/ListJobPage"));
 
 const UseRoutesCustom = () => {
   const routes = useRoutes([
@@ -33,11 +38,21 @@ const UseRoutesCustom = () => {
       children: [
         {
           path: pathDefault.listJob,
-          element: <ListJobPage />,
+          element: (
+            <Suspense fallback={<LoadingSpin />}>
+              {" "}
+              <ListJobPage />
+            </Suspense>
+          ),
         },
         {
           path: pathDefault.listJobsPage,
-          element: <ListJobsPage />,
+          element: (
+            <Suspense fallback={<LoadingSpin />}>
+              {" "}
+              <ListJobsPage />
+            </Suspense>
+          ),
         },
         {
           path: pathDefault.detail,
