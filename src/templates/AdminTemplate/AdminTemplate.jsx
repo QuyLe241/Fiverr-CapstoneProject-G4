@@ -46,7 +46,7 @@ const AdminTemplate = () => {
   } = theme.useToken();
 
   //  kiểm tra phần tử đang đứng tại trang
-  const selectedKey = location.pathname;
+  // const selectedKey = window.location.pathname;
   // const [selectedKey, setSelectedKey] = useState();
   return (
     <Layout className="min-h-screen">
@@ -55,10 +55,7 @@ const AdminTemplate = () => {
         <Menu
           theme="dark"
           mode="inline"
-          defaultSelectedKeys={[selectedKey]}
-          // selectedKeys={[selectedKey]}
-          // defaultOpenKeys={[selectedKey]}
-
+          defaultSelectedKeys={[window.location.pathname]}
           items={[
             {
               key: pathDefault.adminTemplate,
@@ -73,7 +70,7 @@ const AdminTemplate = () => {
             //   label: <Link to={pathDefault.createUser}>Tạo người dùng</Link>,
             // },
             {
-              key: pathDefault.createUser,
+              key: `/admin/${pathDefault.createUser}`,
               icon: <PlusCircleOutlined />,
               label: (
                 <NavLink to={pathDefault.createUser}>Tạo người dùng</NavLink>

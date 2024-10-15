@@ -13,7 +13,7 @@ import { Suspense } from "react";
 import { Skeleton } from "antd";
 import Banner from "../components/Banner/Banner";
 import Content from "../components/Content/Content";
-import Body from "../components/Body/Body";
+// import Body from "../components/Body/Body";
 import LookingToHire from "../components/LookingToHire/LookingToHire";
 import ProSerVice from "../components/ProService/ProSerVice";
 // import ListJobsPage from "../page/InfoListJobPage/ListJobsPage";
@@ -29,6 +29,7 @@ const ListJobsPage = React.lazy(() =>
   import("../page/InfoListJobPage/ListJobsPage")
 );
 const ListJobPage = React.lazy(() => import("../page/ListJobPage/ListJobPage"));
+const Body = React.lazy(() => import("../components/Body/Body"));
 
 const UseRoutesCustom = () => {
   const routes = useRoutes([
@@ -60,7 +61,12 @@ const UseRoutesCustom = () => {
         },
         {
           index: true,
-          element: <Body />,
+          element: (
+            <Suspense fallback={<LoadingSpin />}>
+              {" "}
+              <Body />
+            </Suspense>
+          ),
         },
         {
           path: pathDefault.lookingToHire,
@@ -90,7 +96,7 @@ const UseRoutesCustom = () => {
           //  fallback dừng người dùng khi page chưa tải xong
           index: true,
           element: (
-            <Suspense fallback={<Skeleton />}>
+            <Suspense fallback={<LoadingSpin />}>
               {" "}
               <ManagerUser />
             </Suspense>
