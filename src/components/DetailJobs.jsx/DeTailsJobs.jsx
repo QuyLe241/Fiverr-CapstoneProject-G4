@@ -23,11 +23,11 @@ const DeTailsJobs = () => {
   //
   useEffect(() => {
     const idCongViec = searchParams.get("detail");
-    console.log(idCongViec);
+    // console.log(idCongViec);
     congViecService
       .detailJob(idCongViec)
       .then((res) => {
-        console.log(res.data);
+        // console.log(res.data);
         setListJob(res.data.content);
       })
       .catch((err) => {
